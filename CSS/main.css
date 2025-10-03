@@ -6,17 +6,18 @@
 body {
     font-family: calibri, arial,sans-serif;
     background-color: #949494;
-    color: #ece4dd;
+    color: #ffffff;
 }
 
-.menu ul {
+.menu {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     list-style: none;
     font-weight: bold;
-    font-size: larger;
-    height: 2em;
+    font-size: 1.1em;
+    height: 2.5em;
+    background-color: #494949;
 }
 
 a {
@@ -24,14 +25,14 @@ a {
     color: inherit;
 }
 
-.menu ul li a:active, 
-.menu ul li a:hover,
-.menu ul li a:focus {
+.menu li a:active, 
+.menu li a:hover,
+.menu li a:focus {
     text-shadow:
-        0 0 5px #21b9ff,
+        0 0 5px #00dce4,
         0 0 15px #00dce4,
         0 0 20px #00f7ff,
-        0 0 40px #d4feff;
+        0 0 40px #00f7ff;
     }
 
 footer {
@@ -40,4 +41,17 @@ footer {
     margin-top: 2em;
     padding: 1em;
     background-color: #494949;
+}
+.tarjetas {
+    list-style: none;
+    padding: 1em;
+    background-color: #ffd08a;
+    color: black;
+    width: 50%;
+    border-radius: 7px;
+    margin: 15px;
+    border-color: #ffe0b2;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: 5px 5px 20px #333;
 }
