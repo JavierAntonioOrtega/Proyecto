@@ -9,6 +9,11 @@ body {
     color: #ffffff;
 }
 
+section {
+    margin: 2em;
+    min-height: 100vh;
+}
+
 .menu {
     display: flex;
     justify-content: space-evenly;
@@ -28,11 +33,9 @@ a {
 .menu li a:active, 
 .menu li a:hover,
 .menu li a:focus {
-    text-shadow:
-        0 0 5px #00dce4,
-        0 0 15px #00dce4,
-        0 0 20px #00f7ff,
-        0 0 40px #00f7ff;
+    border-bottom: 3px solid rgb(255, 156, 8);
+    padding-bottom: 3px;
+    transition: border-bottom 0.1s;
     }
 
 footer {
@@ -42,16 +45,52 @@ footer {
     padding: 1em;
     background-color: #494949;
 }
-.tarjetas {
+
+label {
+    vertical-align: middle;
+    margin-left: 6px;
+}
+
+.tarjetero {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 10px;
+}
+
+.tarjeta {
     list-style: none;
     padding: 1em;
     background-color: #ffd08a;
     color: black;
-    width: 50%;
     border-radius: 7px;
-    margin: 15px;
     border-color: #ffe0b2;
     border-style: solid;
     border-width: 2px;
-    box-shadow: 5px 5px 20px #333;
+    box-shadow: 5px 5px 20px #777777;
 }
+
+input[type=checkbox] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #494949;
+    border-radius: 20%;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+
+input[type=checkbox]:checked::after {
+    background-color: none;
+    content: '✔';
+    color: #494949;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+    line-height: 1;
+}
+
