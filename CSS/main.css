@@ -65,10 +65,8 @@ label {
     padding: 1em;
     background-color: #ffd08a;
     color: black;
+    border: 2px solid #ffe0b2;
     border-radius: 7px;
-    border-color: #ffe0b2;
-    border-style: solid;
-    border-width: 2px;
     box-shadow: 5px 5px 20px #777777;
 }
 
@@ -98,35 +96,51 @@ input[type=checkbox]:checked::after {
 
 #cronometro {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    background-color: #ffd08a;
-    color: black;
-    border: 2px solid #ffe0b2;
-    border-radius: 7px;
-    box-shadow: 5px 5px 20px #777777;
-    min-height: 200px;
-}
 
-#cronometro div {
-    flex-grow: 1;
-    flex-basis: 350px;
-    gap: 10px;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    
 }
 
 #tiempo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    min-width: 70%;
-    font-size: 4em;
-    font-family: 'consolas', 'roboto mono', monospace;
+    margin: 10px;
+    width: 500px;
+    font-size: 6em;
+    aspect-ratio: 1/1;
+    border-radius: 7px;
+    border: 2px solid #ffe0b2;
+    background-color: #ffd08a;
+    color: black;
+    box-shadow: 5px 5px 20px #777777;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-button {
+#tiempo.activo {
+    background-color: #ff891a;
+    border-color: #ff9f46;
+    color: #ffe0b2;
+}
+
+#cronometro div {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#cronometro button {
+    justify-content: center;
+    height: 50px;
+    width: 200px;
     border: 2px solid #ffe0b2;
+    background-color: #ffd08a;
     border-radius: 7px;
-    background-color: #ffbe6a;
+    box-shadow: 5px 5px 20px #777777;
+}
+
+#cronometro button:hover {
+    cursor: pointer;
+    background-color: #ffb84d;
+    transition: background-color 0.2s;
 }
