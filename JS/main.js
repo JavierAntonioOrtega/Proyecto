@@ -1,6 +1,7 @@
 let intervalo;
 let tiempo = 0;
 let enMarcha = false;
+const tiempoDisplay = document.getElementById('tiempo');
 
 function actualizarCronometro() {
     const horas = String(Math.floor(tiempo / 3600)).padStart(2, '0');
@@ -16,12 +17,14 @@ function iniciarCronometro() {
             actualizarCronometro();
         }, 1000);
         enMarcha = true;
+        tiempoDisplay.classList.add('activo');
     }
 }
 
 function pausarCronometro() {
     clearInterval(intervalo);
     enMarcha = false;
+    tiempoDisplay.classList.remove('activo');
 }
 
 function reiniciarCronometro() {
@@ -29,6 +32,7 @@ function reiniciarCronometro() {
     tiempo = 0;
     actualizarCronometro();
     enMarcha = false;
+    tiempoDisplay.classList.remove('activo');
 }
 
 actualizarCronometro();
