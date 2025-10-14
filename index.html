@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WEB Para estudiar</title>
     <link rel="stylesheet" href="CSS/main.css">
-    <script src="JS/main.js" defer></script>
+    <script src="JS/main.js" type="module" defer></script>
 </head>
 <body>
     <nav class="menu">
@@ -55,18 +55,7 @@
                     <label for="obj8">Crear una web scraping, utilizando Python y Selenium para las web dinamicas</label>
                 </li>
             </ol>
-            <ol class="tarjeta">
-                <li>
-                    <input type="checkbox" id="obj1">
-                    <label for="obj1">Segunda tarjeta</label>
-                </li>
-            </ol>
-            <ol class="tarjeta">
-                <li>
-                    <input type="checkbox" id="obj1">
-                    <label for="obj1">Tercera tarjeta</label>
-                </li>
-            </ol>
+            <button class="agregarTarjeta">+</button>
         </div>
 
     </section>
@@ -75,9 +64,9 @@
         <div id="cronometro">
             <span id="tiempo">00:00:00</span>
             <div>
-                <button onclick="iniciarCronometro()">Iniciar</button>
-                <button onclick="pausarCronometro()">Pausar</button>
-                <button onclick="reiniciarCronometro()">Reiniciar</button>
+                <button id="iniciarBtn">Iniciar</button>
+                <button id="pausarBtn">Pausar</button>
+                <button id="reiniciarBtn">Reiniciar</button>
             </div>
         </div>
 
