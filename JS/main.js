@@ -1,3 +1,5 @@
+import { crearNuevaTarjeta } from './tarjetas.js';
+
 let intervalo;
 let tiempo = 0;
 let enMarcha = false;
@@ -35,4 +37,5 @@ function reiniciarCronometro() {
     tiempoDisplay.classList.remove('activo');
 }
 
-actualizarCronometro();
+const agregarTarjetaBtn = document.querySelector('.agregarTarjeta');
+agregarTarjetaBtn.addEventListener('click', crearNuevaTarjeta);
